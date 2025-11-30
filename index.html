@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SY.BCA Data Portal</title>
+  <link rel="stylesheet" href="aaa.css" />
+</head>
+<body style="margin:0; font-family: Arial, sans-serif; background:#f0f0f5;">
+
+<!-- Header -->
+<center><header class="header">
+  <img src="index.jpeg" alt="University Logo" class="header-logo" />
+  <h1 class="header-title">SY.BCA Data Portal</h1>
+</header></center>
+
+<!-- Login Section -->
+<div id="login-section" class="login-section">
+  <h2 class="login-title">Login Here</h2>
+  <form id="loginForm" class="login-form">
+    <label for="username" class="label">Username</label>
+    <input type="text" id="username" class="input" placeholder="Enter username" required />
+    <label for="password" class="label">Password</label>
+    <input type="password" id="password" class="input" placeholder="Enter password" required />
+    <button type="submit" class="btn-primary">Login</button>
+  </form>
+  
+</div>
+
+<!-- Student Dashboard -->
+<div id="student-dashboard" class="dashboard" style="display:none;">
+  <h2 class="dashboard-title">Student Dashboard</h2>
+  <p>Welcome, <span id="studentName" class="bold"></span> (<span id="studentRoll"></span>)</p>
+  
+  <h3>Profile Details:</h3>
+  <div id="studentDetails" class="card-container"></div>
+  
+  <h3>Marks:</h3>
+  <div id="studentMarks" class="card-container"></div>
+  
+  <button onclick="logout()" class="btn-danger logout-btn">Logout</button>
+</div>
+
+
+<!-- Teacher Dashboard -->
+<!-- Teacher Dashboard -->
+<div id="teacher-dashboard" class="dashboard" style="display:none;">
+  <h2 class="dashboard-title">Teacher Dashboard</h2>
+  <button onclick="logout()" class="btn-danger">Logout</button>
+  <h3>Add / Update Student Data</h3>
+  <form id="studentForm" class="student-form">
+    <input type="text" id="s_username" placeholder="Username (unique)" required class="input flex1" />
+    <input type="password" id="s_password" placeholder="Password" required class="input flex1" />
+    <input type="text" id="s_name" placeholder="Name" required class="input flex1" />
+    <input type="text" id="s_roll" placeholder="Roll Number" required class="input flex1" />
+    <input type="text" id="s_blood" placeholder="Blood Group" required class="input flex1" />
+    <input type="number" id="s_ds" placeholder="Data Structures" min="0" max="100" class="input small-input" />
+    <input type="number" id="s_os" placeholder="AI" min="0" max="100" class="input small-input" />
+    <input type="number" id="s_cpp" placeholder="C++" min="0" max="100" class="input small-input" />
+    <input type="number" id="s_dc" placeholder="Data Communication" min="0" max="100" class="input small-input" />
+    <input type="number" id="s_fw" placeholder="Field Work" min="0" max="100" class="input small-input" />
+    <button type="submit" class="btn-primary">Add / Update Student</button>
+  </form>
+  <h3>All Students</h3>
+  <table class="teacher-table" border="1">
+    <thead>
+      <tr>
+        <th>Username</th><th>Roll No</th><th>Name</th><th>Blood Group</th>
+        <th>DS</th><th>OS</th><th>C++</th><th>DC</th><th>FW</th>
+        <th>Total</th><th>Average</th><th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="teacherTable"></tbody>
+  </table>
+</div>
+
+<!-- Admission Staff Dashboard -->
+<div id="admissionstaff-dashboard" class="dashboard" style="display:none;">
+  <h2 class="dashboard-title">Admission Staff Dashboard</h2>
+  <button onclick="logout()" class="btn-danger">Logout</button>
+  <h3>BCA Student Registrations</h3>
+  <table class="teacher-table" border="1">
+    <thead>
+      <tr>
+        <th>Username</th><th>Name</th><th>Roll No</th><th>Blood Group</th><th>Status</th><th>Approve</th>
+      </tr>
+    </thead>
+    <tbody id="admissionStaffTable"></tbody>
+  </table>
+</div>
+
+<!-- Developer Dashboard -->
+<div id="developer-dashboard" class="dashboard" style="display:none;">
+  <h2 class="dashboard-title">Developer Dashboard</h2>
+  <button onclick="clearAllData()" class="btn-danger">Clear All Student Data</button>
+  <button onclick="logout()" class="btn-info">Logout</button>
+
+  <h3 style="margin-top:30px; color:#003366;">Delete Specific Student</h3>
+  <form id="deleteStudentForm" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
+    <input type="text" id="searchInput" placeholder="Enter Roll No or Username" class="input flex1" />
+    <button type="submit" class="btn-danger">Search & Delete</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  Developed by Irfan Shaikh
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px;
+  background: #003366;
+  color: white;
+}
+.header-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.header-title {
+  margin: 10px 0 0;
+  font-size: 24px;
+}
+
+/* Login Section */
+.login-section {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: fadeIn 0.8s ease;
+}
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+}
+.label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #003366;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #0055aa;
+  transform: scale(1.05);
+}
+.btn-danger {
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-info {
+  background: #0099cc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Dashboard */
+.dashboard {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  animation: slideIn 0.6s ease;
+}
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Student / Teacher Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h4 {
+  margin: 0 0 10px;
+  color: #003366;
+}
+.card p {
+  margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #003366;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(20);}
+  to { opacity: 1; transform: scale(1);}
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
